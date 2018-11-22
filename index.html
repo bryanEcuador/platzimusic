@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="app" >
+		<p>El contador esta en {{contador}}</p>
+		<button v-on:click="sumar">+</button>
+		<button v-on:click="restar">-</button>
+
+	</div>
+<!-- development version, includes helpful console warnings -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<script>
+	
+	var app = new Vue({
+		el : "#app",
+		data : {
+			contador : 0,	
+		},
+		filters : {
+			
+		},
+		methods : {
+			sumar : function(){
+				this.contador++
+			},
+			restar : function(){
+				this.contador--
+			}
+		}
+	});
+
+
+</script>
+
+
+</body>
+</html>
